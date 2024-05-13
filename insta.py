@@ -3,6 +3,8 @@ import json
 
 def main():
     st.title("Ratio Adjuster")
+    st.text("See which Instagram accounts you follow that don't follow you back")
+    st.text("Upload the followers_1.json and following.json files by downloading your Instagram data")
     
     # File upload for followers_1.json
     st.sidebar.header('Upload followers_1.json')
