@@ -30,7 +30,7 @@ def main():
 
         st.write("Accounts that don't follow you back:")
         for account in not_following:
-            st.write("instagram.com/" + account)
+            st.markdown(f"[instagram.com/{account}](https://www.instagram.com/{account})")
 
 if __name__ == "__main__":
     main()
