@@ -16,8 +16,8 @@ def main():
     following_file = st.sidebar.file_uploader("Choose a JSON file", key="following", type=["json"])
 
     if followers_file is not None and following_file is not None:
-        followers_1_data = json.load(followers_file)
-        following_data = json.load(following_file)
+        followers_1_data = [json.load(followers_file)]
+        following_data = [json.load(following_file)]
 
         # Extract accounts from followers_1.json
         followers_1_accounts = [entry['string_list_data'][0]['value'] for entry in followers_1_data]
