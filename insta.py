@@ -21,10 +21,10 @@ def main():
         following_data = json.load(following_file)
 
         # Extract accounts from followers_1.json
-        followers = array.array('str', [entry['string_list_data'][0]['value'] for entry in followers_1_data])
+        followers = array.array('u', [entry['string_list_data'][0]['value'] for entry in followers_1_data])
 
         # Extract accounts from following.json
-        following = array.array('str', [entry['string_list_data'][0]['value'] for entry in following_data['relationships_following']])
+        following = array.array('u', [entry['string_list_data'][0]['value'] for entry in following_data['relationships_following']])
 
         # Create a list of accounts in following but not in followers_1
         not_following = [account for account in following if account not in followers]
