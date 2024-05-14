@@ -25,10 +25,11 @@ def main():
         following_accounts = [entry['string_list_data'][0]['value'] for entry in following_data['relationships_following']]
 
         # Create a list of accounts in following but not in followers_1
-        accounts_not_followers = ["instagram.com/" + account for account in following_accounts if account not in followers_1_accounts]
+        accounts_not_followers = ["[instagram.com/" + account + "](https://www.instagram.com/" + account + ")" for account in following_accounts if account not in followers_1_accounts]
 
         st.write("Accounts that don't follow you back:")
-        st.write(accounts_not_followers)
+        for account_link in accounts_not_followers:
+            st.markdown(account_link, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
