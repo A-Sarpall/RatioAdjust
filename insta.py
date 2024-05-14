@@ -20,10 +20,10 @@ def main():
         following_data = json.load(following_file)
 
         # Extract accounts from followers_1.json
-        followers_1_accounts = [entry['name'] for entry in followers_1_data['users']]
+        followers_1_accounts = [entry['string_list_data'][0]['value'] for entry in followers_1_data['data']['user']['edge_followed_by']['edges']]
 
         # Extract accounts from following.json
-        following_accounts = [entry['username'] for entry in following_data['users']]
+        following_accounts = [entry['username'] for entry in following_data['data']['user']['edge_follow']['edges']]
 
         # Create a list of accounts in following but not in followers_1
         accounts_not_followers = ["[instagram.com/" + account + "](https://www.instagram.com/" + account + ")" for account in following_accounts if account not in followers_1_accounts]
