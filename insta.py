@@ -1,6 +1,5 @@
 import streamlit as st
 import json
-import array
 
 def main():
     st.title("Ratio Adjuster")
@@ -21,10 +20,10 @@ def main():
         following_data = json.load(following_file)
 
         # Extract accounts from followers_1.json
-        followers = array.array('u', [entry['string_list_data'][0]['value'] for entry in followers_1_data])
+        followers = [entry['string_list_data'][0]['value'] for entry in followers_1_data]
 
         # Extract accounts from following.json
-        following = array.array('u', [entry['string_list_data'][0]['value'] for entry in following_data['relationships_following']])
+        following = [entry['string_list_data'][0]['value'] for entry in following_data['relationships_following']]
 
         # Create a list of accounts in following but not in followers_1
         not_following = [account for account in following if account not in followers]
