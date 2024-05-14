@@ -4,7 +4,6 @@ import json
 def main():
     st.title("Ratio Adjuster")
     st.text("See which Instagram accounts you follow that don't follow you back")
-    #line
     st.text("Upload the followers_1.json and following.json files")
     st.text("by downloading your Instagram data")
     
@@ -21,10 +20,10 @@ def main():
         following_data = json.load(following_file)
 
         # Extract accounts from followers_1.json
-        followers_1_accounts = [entry['name'] for entry in followers_1_data['profile_and_chaining'][0]['profile_and_chaining'][0]['chaining']['user']]
+        followers_1_accounts = [entry['string_list_data'][0]['value'] for entry in followers_1_data]
 
         # Extract accounts from following.json
-        following_accounts = [entry['username'] for entry in following_data['following']]
+        following_accounts = [entry['string_list_data'][0]['value'] for entry in following_data['relationships_following']]
 
         # Create a list of accounts in following but not in followers_1
         accounts_not_followers = ["[instagram.com/" + account + "](https://www.instagram.com/" + account + ")" for account in following_accounts if account not in followers_1_accounts]
