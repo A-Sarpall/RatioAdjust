@@ -28,6 +28,7 @@ def main():
         # Create a list of accounts in following but not in followers_1
         not_following = [account for account in following if account not in followers]
 
+        st.divider()
         st.write("Accounts that don't follow you back:")
         for account in not_following:
             st.markdown(f"[instagram.com/{account}](https://www.instagram.com/{account})")
