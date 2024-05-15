@@ -2,7 +2,9 @@ import streamlit as st
 import json
 def main():
     st.title("Ratio Adjuster")
+    st.divider()
     st.text("See which Instagram accounts you follow that don't follow you back")
+    st.divider()
     st.text("Upload the followers_1.json and following.json files")
     st.text("by downloading your Instagram data")
     
@@ -32,5 +34,6 @@ def main():
             st.markdown(f"[instagram.com/{account}](https://www.instagram.com/{account})")
     else:
         st.write("Empty Files")
+        
 if __name__ == "__main__":
     main()
