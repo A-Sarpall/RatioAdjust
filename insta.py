@@ -8,11 +8,11 @@ def main():
     st.text("by downloading your Instagram data")
     
     # File upload for followers_1.json
-    st.sidebar.title('Upload followers_1.json')
+    st.sidebar.header('Upload followers_1.json')
     followers_file = st.sidebar.file_uploader("Choose a JSON file", key="followers", type=["json"])
 
     # File upload for following.json
-    st.sidebar.title('Upload following.json')
+    st.sidebar.header('Upload following.json')
     following_file = st.sidebar.file_uploader("Choose a JSON file", key="following", type=["json"])
 
     if followers_file is not None and following_file is not None:
