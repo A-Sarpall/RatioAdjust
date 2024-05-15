@@ -33,7 +33,7 @@ def main():
         for account in not_following:
             st.markdown(f"[instagram.com/{account}](https://www.instagram.com/{account})")
     else:
-        st.write("Empty Files")
+        st.write("Files are Empty :(")
         
 if __name__ == "__main__":
     main()
