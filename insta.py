@@ -32,5 +32,4 @@ if followers_file is not None and following_file is not None:
     for account in not_following:
         st.markdown(f"[instagram.com/{account}](https://www.instagram.com/{account})")
     else:
-        st.divider()
         st.write("Files are Empty :(")
