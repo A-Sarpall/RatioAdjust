@@ -35,5 +35,5 @@ def main():
     else:
         st.write("Files are Empty :(")
         
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
