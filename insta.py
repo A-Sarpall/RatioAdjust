@@ -2,7 +2,16 @@ import streamlit as st
 import json
 st.title("Ratio Adjuster")
 st.text("See which Instagram accounts you follow that don't follow you back")
-st.write("---")
+st.divider()
+st.write("On your phone open the Instagram App")
+st.write("Profile->Three lines at the top right")
+st.write("Your Activity->Download Your Information")
+st.write("Download or transfer info->Select the account you want")
+st.write("Some of your information->Followers and following")
+st.write("Download to device->Date Range *All Time*")
+st.write("In the notify section, make sure it's an email you have access to")
+st.write("Format: *JSON*->Create Files")
+st.divider()
 st.text("Upload the followers_1.json and following.json files")
 st.text("by downloading your Instagram data")
 
@@ -32,14 +41,5 @@ if followers_file is not None and following_file is not None:
     for account in not_following:
         st.markdown(f"[instagram.com/{account}](https://www.instagram.com/{account})")
 else:
-    st.divider()
-    st.write("On your phone open the Instagram App")
-    st.write("Profile->Three lines at the top right")
-    st.write("Your Activity->Download Your Information")
-    st.write("Download or transfer info->Select the account you want")
-    st.write("Some of your information->Followers and following")
-    st.write("Download to device->Date Range *All Time*")
-    st.write("In the notify section, make sure it's an email you have access to")
-    st.write("Format: *JSON*->Create Files")
     st.divider()
     st.write("Files are Empty :(")
