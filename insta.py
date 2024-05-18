@@ -5,6 +5,7 @@ st.text("See which Instagram accounts you follow that don't follow you back")
 st.divider()
 st.text("Upload the followers_1.json and following.json files")
 st.text("by downloading your Instagram data")
+st.text("**Your Data is safe** *Data is neither stored nor accessible in any means by the developer*")
 
 # File upload for followers_1.json
 st.sidebar.title('Upload followers_1.json')
@@ -42,5 +43,8 @@ else:
     st.write("Download to device->Date Range: **All Time**")
     st.write("In the notify section, make sure it's an email you have access to")
     st.write("Format: **JSON**->Create Files")
+    st.write("Files will be sent to your email from Meta")
+    st.write("Click the link in your email and download them")
+    st.write("Upload them to the corresponding boxes and see which accounts don't follow back")
     st.divider()
     st.write("Files are Empty :(")
