@@ -42,5 +42,5 @@ else:
     st.write("Download to device->Date Range: **All Time**")
     st.write("In the notify section, make sure it's an email you have access to")
     st.write("Format: **JSON**->Create Files")
-    #st.divider()
+    st.divider()
     st.write("Files are Empty :(")
