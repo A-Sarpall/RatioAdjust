@@ -33,6 +33,7 @@ if followers_file is not None and following_file is not None:
         st.markdown(f"[instagram.com/{account}](https://www.instagram.com/{account})")
 else:
     st.divider()
+    st.title("How to Download")
     st.write("On your phone open the Instagram App")
     st.write("Profile->Three lines at the top right")
     st.write("Your Activity->Download Your Information")
